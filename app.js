@@ -10,7 +10,9 @@ var flash = require('connect-flash');
 
 var indexRoutes = require('./routes/index');
 var loginRoutes = require('./routes/login');
+var logoutRoutes = require('./routes/logout');
 var homeRoutes = require('./routes/home');
+var blogRoutes = require('./routes/blog');
 
 var settings = require('./settings');
 
@@ -49,7 +51,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 添加路由
 app.use('/', indexRoutes);
 app.use('/login', loginRoutes);
+app.use('/logout', logoutRoutes);
 app.use('/home', homeRoutes);
+app.use('/blog', blogRoutes);
 
 // 捕获404错误，并转发到错误处理器
 app.use(function(req, res, next) {
