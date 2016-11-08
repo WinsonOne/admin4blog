@@ -13,6 +13,7 @@ var loginRoutes = require('./routes/login');
 var logoutRoutes = require('./routes/logout');
 var homeRoutes = require('./routes/home');
 var blogRoutes = require('./routes/blog');
+var photoRoutes = require('./routes/photo');
 
 var settings = require('./settings');
 
@@ -54,6 +55,7 @@ app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
 app.use('/home', homeRoutes);
 app.use('/blog', blogRoutes);
+app.use('/photo', photoRoutes);
 
 // 捕获404错误，并转发到错误处理器
 app.use(function(req, res, next) {
