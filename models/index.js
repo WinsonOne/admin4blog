@@ -10,3 +10,4 @@ mongoose.connect(settings.mongodb, function (err) {
 
 exports.User = require('./user');
 exports.Blog = require('./blog');
+exports.Photo = require('./photo');
