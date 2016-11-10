@@ -94,6 +94,16 @@
           <div class="box">
             <div class="box-header">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-import"></span>上传图片</button>
+              <% if(success){ %>
+              <div>
+                <%=success%>
+              </div>
+              <% } %>
+              <% if(error){ %>
+              <div>
+                <%=error%>
+              </div>
+              <% } %>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
