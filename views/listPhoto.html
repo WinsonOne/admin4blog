@@ -107,7 +107,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="blogstable" class="table table-bordered table-hover">
+              <table id="photostable" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                   <th>图片名称</th>
@@ -117,6 +117,19 @@
                   <th>操作</th>
                 </tr>
                 </thead>
+                <tbody>
+                <% photos.forEach(function (photo, index) { %>
+                <tr>
+                  <td><%=photo.name%></td>
+                  <td>
+                    <%=photo.author%>
+                  </td>
+                  <td><%=photo.date%></td>
+                  <td><%=photo.url%></td>
+                  <td><a href="/photo/delete/<%=photo._id%>">删除</td>
+                </tr>
+                <% }) %>
+                </tbody>
               </table>
             </div>
             <!-- /.box-body -->

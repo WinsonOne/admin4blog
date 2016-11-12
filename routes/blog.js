@@ -32,7 +32,6 @@ router.post('/save', function(req, res, next) {
 
 /* GET blog list page. */
 router.get('/list', function(req, res, next) {
-  var blogs = [];
   Blog.find(function (err, docs) {
     res.render('listBlog', {
       user : req.session.user,
