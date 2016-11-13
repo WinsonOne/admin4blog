@@ -80,10 +80,7 @@ router.get('/delete/:id', function(req, res, next) {
       req.flash('error',err);
       res.redirect('/photo/list');
     }else{
-      var path = __dirname;
-      var lastIndex = path.lastIndexOf('/');
-      path = path.substring(0,lastIndex);
-      path = path +'/public' + photo.url;
+      path = './public' + photo.url;
       console.log('delete file:' + path);
       fs.unlink(path, function(err){
         if(err){

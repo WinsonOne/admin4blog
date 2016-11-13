@@ -95,14 +95,14 @@
             <div class="box-header">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-import"></span>上传图片</button>
               <% if(success){ %>
-              <div>
+              <label>
                 <%=success%>
-              </div>
+              </label>
               <% } %>
               <% if(error){ %>
-              <div>
+              <label>
                 <%=error%>
-              </div>
+              </label>
               <% } %>
             </div>
             <!-- /.box-header -->
@@ -125,7 +125,7 @@
                     <%=photo.author%>
                   </td>
                   <td><%=photo.date%></td>
-                  <td><%=photo.url%></td>
+                  <td><img src="<%=photo.url%>" height="60" title="<%=photo.name%>"></img></td>
                   <td><a href="/photo/delete/<%=photo._id%>">删除</td>
                 </tr>
                 <% }) %>
